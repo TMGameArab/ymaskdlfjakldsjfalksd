@@ -16,14 +16,14 @@ client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
   console.log(`---------------------------------------`);
 });
-**الرد التلقائي
-//-------------------------------------------
+//الرد التلقائي
+//--------------------------------------------
 client.on('message', msg => {
   if (msg.content === '!help') {
     msg.reply('Check Your DM :envelope_with_arrow:');
   }
 });
-//-------------------------------------------
+//--------------------------------------------
 client.on('message', message => {
     if (message.content.startsWith("رابط")) {
 
@@ -42,7 +42,7 @@ client.on('message', message => {
         .setColor("RANDOM")
                 .setAuthor(message.guild.name, message.guild.iconURL)
         .setDescription(`
-!
+**
 ---------------------
 -[${message.guild.name}]  هذا هو رابط سيرفر
 ---------------------
@@ -50,18 +50,18 @@ client.on('message', message => {
 ---------------------
 -هذا الرابط صالح لمده 24 ساعه فقط
 ---------------------
-!`)
+**`)
       message.author.sendEmbed(Embed11)
     }
 });
-//-------------------------------------------
+//--------------------------------------------
 client.on('message', msg => {
   if (msg.content === '!help') {
     msg.reply('لقد تم إرسال الأوامر في الخاص :envelope_with_arrow: اذا لم تصلك رساله قم بإلغاء خظر الرسائل وجرب مره اخري');
   }
 });
-** -------------------------------------------
-//--------------------------------------------
+// -------------------------------------------
+//---------------------------------------------
 client.on('message', msg => {
   if (msg.content === '!adminhelp') {
     msg.author.send(`
@@ -83,7 +83,7 @@ client.on('message', msg => {
 client.on('message', msg => {
   if (msg.content === '!help') {
     msg.author.send(`
-● ▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐ ●  
+● ▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐ ● 
                         
 !server 『معلومات عن السيرفر』                      
 !date 『لمعرفه التاريخ』
@@ -99,7 +99,7 @@ client.on('message', msg => {
 『!اسئلني』
 『!كت تويت』
 『!صراحه』
-● ▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐ ● 
+● ▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐ ●  
     
     `);
   }
@@ -156,7 +156,7 @@ client.on('message', message => {
          .addField(':earth_asia: الدوله',message.guild.region)
          .addField(':ribbon: ايموجي السيرفر',`${message.guild.emojis.size}`,true)
          .addField(':construction: مستوى التحقق',`${verificationLevels[message.guild.verificationLevel]}`,true)
-         .addField('!staffs'+message.guild.roles.size+' ','To See Server Original Staff')
+         .addField('**staffs'+message.guild.roles.size+' ','To See Server Original Staff')
          .addField(':closed_lock_with_key: الرتب  '+message.guild.roles.size+' ','Type `.roles` To See The Server Roles!')
          message.channel.send({embed:xNiTRoZ});
      }
@@ -188,7 +188,7 @@ var prefix = "!";
     let args = message.content.split(' ').slice(1).join(' ');
 if(message.content.split(' ')[0] == prefix + 'bc') {
     if (!args[1]) {
-message.channel.send("**bc <message>**");
+message.channel.send("!bc <message>**");
 return;
 }
         message.guild.members.forEach(m => {
@@ -198,7 +198,7 @@ return;
             .addField('» المرسل : ', `${message.author.username}#${message.author.discriminator}`)
             .addField(' » الرسالة : ', args)
             .setColor('#ff0000')
-            ** m.send(`[${m}]`);
+            // m.send(`[${m}]`);
             m.send(`${m}`,{embed: bc});
         });
     }
@@ -217,11 +217,11 @@ return;
               Day = currentTime.getDate();
 
               var Date15= new Discord.RichEmbed()
-              .setTitle("!『  Date - التاريخ 』 !")
+              .setTitle("!『  Date - التاريخ 』 **")
               .setColor('RANDOM')
               .setTimestamp()
               .setDescription( "『"+ Day + "-" + Month + "-" + Year + "』")
-              .setFooter(`*help to see all bot commands `, 'https:**images-ext-1.discordapp.net/external/x-p4BwGofa_z_p9hpV-4hJPcqWh-aWGQzsmI189cDiY/%3Fwidth%3D344%26height%3D344/https/media.discordapp.net/attachments/372444859329544203/372701184055836682/ass.jpg?width=231!height=231')
+              .setFooter(`*help to see all bot commands `, 'https://images-ext-1.discordapp.net/external/x-p4BwGofa_z_p9hpV-4hJPcqWh-aWGQzsmI189cDiY/%3Fwidth%3D344%26height%3D344/https/media.discordapp.net/attachments/372444859329544203/372701184055836682/ass.jpg?width=231**height=231')
                message.channel.sendEmbed(Date15);
       }
   });
@@ -267,38 +267,38 @@ if (command == "embed") {
 
 
 });
-//-------------------------------------------
+//--------------------------------------------
 client.on('message', msg => {
   if (msg.content === 'سلام عليكم') {
     msg.reply('وعليكم السلام ورحمة الله وبركاته ');
   }
 });
-//-------------------------------------------
+//--------------------------------------------
 client.on('message', msg => {
   if (msg.content === 'السلام عليكم') {
     msg.reply('وعليكم السلام ورحمة الله وبركاته ');
   }
 });
-//-------------------------------------------
+//--------------------------------------------
 client.on('message', msg => {
   if (msg.content === 'باك') {
     msg.reply('ولكم ❤');
   }
 });
-//-------------------------------------------
+//--------------------------------------------
 client.on('message', msg => {
   if (msg.content === 'Back') {
     msg.reply('Welcome ❤');
   }
 });
-//-------------------------------------------
+//--------------------------------------------
 
 client.on('message', message => {
     if (message.content === "!roles") {
         var roles = message.guild.roles.map(roles => `${roles.name}, `).join(' ')
         const embed = new Discord.RichEmbed()
         .setColor('RANDOM')
-        .addField('الرتب:',`![${roles}]!`)
+        .addField('الرتب:',`**[${roles}]**`)
         message.channel.sendEmbed(embed);
     }
 });
@@ -309,10 +309,10 @@ client.on('message', message => {
         var channels = message.guild.channels.map(channels => `${channels.name}, `).join(' ')
         const embed = new Discord.RichEmbed()
         .setColor('RANDOM')
-        .addField(`${message.guild.name}`,`!Rooms:white_check_mark:!`)
-        .addField(':arrow_down: Rooms Number. :heavy_check_mark:',`** ${message.guild.channels.size}!`)
+        .addField(`${message.guild.name}`,`**Rooms:white_check_mark:**`)
+        .addField(':arrow_down: Rooms Number. :heavy_check_mark:',`** ${message.guild.channels.size}**`)
         
-.addField(':arrow_down:Rooms  Name. :heavy_check_mark::',`![${channels}]!`)
+.addField(':arrow_down:Rooms  Name. :heavy_check_mark::',`**[${channels}]**`)
         message.channel.sendEmbed(embed);
     }
 });
@@ -382,10 +382,10 @@ const Sra7a = [
  if (message.content.startsWith('!صراحه')) {
      if(!message.channel.guild) return message.reply(' This command only for servers ');
   var client= new Discord.RichEmbed()
-  .setTitle("لعبة صراحة ..")
+  .setTitle("لعبة صراحة **")
   .setColor('RANDOM')
   .setDescription(`${Sra7a[Math.floor(Math.random() * Sra7a.length)]}`)
-  .setImage("https:**cdn.discordapp.com/attachments/371269161470525444/384103927060234242/125.png")
+  .setImage("https://cdn.discordapp.com/attachments/371269161470525444/384103927060234242/125.png")
                   .setTimestamp()
 
    message.channel.sendEmbed(client);
@@ -393,11 +393,11 @@ const Sra7a = [
  }
 });
 
-//-------------------------------------
+//--------------------------------------
 const cuttweet = [
      'كت تويت ‏| تخيّل لو أنك سترسم شيء وحيد فيصبح حقيقة، ماذا سترسم؟',
      'كت تويت | أكثر شيء يُسكِت الطفل برأيك؟',
-     'كت تويت | الحرية لـ ... ؟',
+     'كت تويت | الحرية لـ **. ؟',
      'كت تويت | قناة الكرتون المفضلة في طفولتك؟',
      'كت تويت ‏| كلمة للصُداع؟',
      'كت تويت ‏| ما الشيء الذي يُفارقك؟',
@@ -436,7 +436,7 @@ const cuttweet = [
   console.log('[id] Send By: ' + message.author.username)
     }
 });
-//-------------------------------------
+//--------------------------------------
 client.on('message', message => {
     if (message.content == "!اسئلنى") {
          message.react('🤔','👌')
@@ -464,50 +464,50 @@ client.on('message', message => {
         })
     }
 })
-//---------------------------------------------
+//----------------------------------------------
 
-** Global Settings
-var prefix = '!'; ** This is the prefix, you can change it to whatever you want.
+// Global Settings
+var prefix = '!'; // This is the prefix, you can change it to whatever you want.
 
-** Listener Event: Runs whenever a message is received.
+// Listener Event: Runs whenever a message is received.
 client.on('message', message => {
 
-    ** Variables - Variables make it easy to call things, since it requires less typing.
-    let msg = message.content.toUpperCase(); ** This variable takes the message, and turns it all into uppercase so it isn't case sensitive.
-    let sender = message.author; ** This variable takes the message, and finds who the author is.
-    let cont = message.content.slice(prefix.length).split(" "); ** This variable slices off the prefix, then puts the rest in an array based off the spaces
-    let args = cont.slice(1); ** This slices off the command in cont, only leaving the arguments.
+    // Variables - Variables make it easy to call things, since it requires less typing.
+    let msg = message.content.toUpperCase(); // This variable takes the message, and turns it all into uppercase so it isn't case sensitive.
+    let sender = message.author; // This variable takes the message, and finds who the author is.
+    let cont = message.content.slice(prefix.length).split(" "); // This variable slices off the prefix, then puts the rest in an array based off the spaces
+    let args = cont.slice(1); // This slices off the command in cont, only leaving the arguments.
 
-    ** Commands
+    // Commands
 
 
-    ** Purge
-    if (msg.startsWith(prefix + 'CLEAR')) { ** This time we have to use startsWith, since we will be adding a number to the end of the command.
-        ** We have to wrap this in an async since awaits only work in them.
+    // Purge
+    if (msg.startsWith(prefix + 'CLEAR')) { // This time we have to use startsWith, since we will be adding a number to the end of the command.
+        // We have to wrap this in an async since awaits only work in them.
         async function clear() {
-            message.delete(); ** Let's delete the command message, so it doesn't interfere with the messages we are going to delete.
+            message.delete(); // Let's delete the command message, so it doesn't interfere with the messages we are going to delete.
 
-            ** Now, we want to check if the user has the `bot-commander` role, you can change this to whatever you want.
+            // Now, we want to check if the user has the `bot-commander` role, you can change this to whatever you want.
             if (!message.member.hasPermission('ADMINISTRATOR')) return message.reply(`انت لست ادمن`).catch(console.error);
 
-            ** We want to check if the argument is a number
+            // We want to check if the argument is a number
             if (isNaN(args[0])) {
-                ** Sends a message to the channel.
-                message.channel.send('يجب اختيار الرقم. \n Usage: ' + prefix + 'clear <الرقم>'); **\n means new line.
-                ** Cancels out of the script, so the rest doesn't run.
+                // Sends a message to the channel.
+                message.channel.send('يجب اختيار الرقم. \n Usage: ' + prefix + 'clear <الرقم>'); //\n means new line.
+                // Cancels out of the script, so the rest doesn't run.
                 return;
             }
 
-            const fetched = await message.channel.fetchMessages({limit: args[0]}); ** This grabs the last number(args) of messages in the channel.
-            console.log(fetched.size + ' messages found, deleting...'); ** Lets post into console how many messages we are deleting
+            const fetched = await message.channel.fetchMessages({limit: args[0]}); // This grabs the last number(args) of messages in the channel.
+            console.log(fetched.size + ' messages found, deleting**.'); // Lets post into console how many messages we are deleting
 
-            ** Deleting the messages
+            // Deleting the messages
             message.channel.bulkDelete(fetched)
-                .catch(error => message.channel.send(`Error: ${error}`)); ** If it finds an error, it posts it into the channel.
+                .catch(error => message.channel.send(`Error: ${error}`)); // If it finds an error, it posts it into the channel.
 
         }
-        ** We want to make sure we call the function whenever the purge command is run.
-        clear(); ** Make sure this is inside the if(msg.startsWith)
+        // We want to make sure we call the function whenever the purge command is run.
+        clear(); // Make sure this is inside the if(msg.startsWith)
         
     }
 });
@@ -521,7 +521,7 @@ client.on('message', function(message) {
         .setTitle('``رسالة جديدة فى الخاص``')
         .setThumbnail(`${message.author.avatarURL}`)
         .setDescription(`\n\n\`\`\`${message.content}\`\`\``)
-        .setFooter(`From **${message.author.tag} (${message.author.id})!`)
+        .setFooter(`From **${message.author.tag} (${message.author.id})**`)
     client.channels.get("444930019169402880").send({embed:embed});
     }
 });
@@ -564,7 +564,7 @@ client.on('message', msg => {
         .setAuthor(member.user.username, member.user.avatarURL)
         .setThumbnail(member.user.avatarURL)
         .setDescription(``)
-        .addField('لقد غادر',`**${member}!`)
+        .addField('لقد غادر',`**${member}**`)
         .setColor('RED')
     
     var channel =member.guild.channels.find('name', 'welcome')
@@ -659,7 +659,7 @@ client.on("message",msg =>{
     }
 });
 
-//-----------------------------
+//------------------------------
 client.on('message', message => {
 var prefix = "!";
 
@@ -676,7 +676,7 @@ client.user.setGame(argresult);
 
 if (message.content.startsWith(prefix + 'streem')) {
 if (message.author.id !== '294155759741304833') return message.reply('** هذا الأمر فقط لصاحب البوت و شكراًً **')
-client.user.setGame(argresult, "http:**twitch.tv/y04zgamer");
+client.user.setGame(argresult, "http://twitch.tv/y04zgamer");
  message.channel.sendMessage(`**${argresult}** :تم تغيير الحالة الى ستريمنج`)
 } else
 
@@ -684,7 +684,7 @@ if (message.content.startsWith(prefix + 'setname')) {
 if (message.author.id !== '294155759741304833') return message.reply('** هذا الأمر فقط لصاحب البوت و شكراًً **')
 client.user.setUsername(argresult).the
 message.channel.sendMessage(`**${argresult}** : تم تغير الأسم`)
-return message.reply("**لا تستطيع تغير الأسم الا بعد ساعتين**");
+return message.reply("!لا تستطيع تغير الأسم الا بعد ساعتين**");
 } else
  
 if (message.content.startsWith(prefix + 'setavatar')) {
@@ -745,7 +745,7 @@ client.on('message', function(message) {
   .setImage(`${message.author.avatarURL}`)
   
 
-  message.delete("..");
+  message.delete("!");
 
 
         message.member.addRole(message.guild.roles.find('name', '⚡  Լ.Ɲ MEMƁER™'));
@@ -846,13 +846,13 @@ client.on('guildMemberAdd', member => {
        .setAuthor(`${member.user.tag}`, member.user.avatarURL)
 	   .setThumbnail(memberavatar)
        .setColor('GREEN')
-       .setDescription(`📥 <@${member.user.id}> !دخل السيرفر!\n\n`)
+       .setDescription(`📥 <@${member.user.id}> **دخل السيرفر**\n\n`)
        .setTimestamp();
      channel.send({embed:embed});
 });
-**
+//
 
-**
+//
 client.on('guildMemberRemove', member => {
     if (!member || !member.id || !member.guild) return;
     const guild = member.guild;
@@ -865,7 +865,7 @@ client.on('guildMemberRemove', member => {
        .setAuthor(`${member.user.tag}`, member.user.avatarURL)
 	   .setThumbnail(memberavatar)
        .setColor('RED')
-       .setDescription(`📤 <@${member.user.id}> !خرج من السيرفر!\n\n`)
+       .setDescription(`📤 <@${member.user.id}> **خرج من السيرفر**\n\n`)
        .setTimestamp();
      channel.send({embed:embed});
 });
@@ -879,8 +879,8 @@ client.on('messageDelete', message => {
     let embed = new Discord.RichEmbed()
        .setAuthor(`${message.author.tag}`, message.author.avatarURL)
        .setColor('BLACK')
-       .setDescription(`🗑️ !حذف رساله!
-!ارسلها <@${message.author.id}>                                                                                                                        تم حذفها في شات** <#${message.channel.id}>\n\n \`${message.cleanContent}\``)
+       .setDescription(`🗑️ **حذف رساله**
+**ارسلها <@${message.author.id}>                                                                                                                        تم حذفها في شات** <#${message.channel.id}>\n\n \`${message.cleanContent}\``)
        .setTimestamp();
      channel.send({embed:embed});
 
@@ -896,7 +896,7 @@ client.on('messageUpdate', (message, newMessage) => {
     let embed = new Discord.RichEmbed()
        .setAuthor(`${message.author.tag}`, message.author.avatarURL)
        .setColor('SILVER')
-       .setDescription(`✏ !تعديل رساله
+       .setDescription(`✏ **تعديل رساله
 ارسلها <@${message.author.id}>                                                                                                                         تم تعديلها في شات** <#${message.channel.id}>\n\nقبل التعديل:\n \`${message.cleanContent}\`\n\nبعد التعديل:\n \`${newMessage.cleanContent}\``)
        .setTimestamp();
      channel.send({embed:embed});
@@ -907,7 +907,7 @@ client.on("roleCreate", rc => {
   if(channel) {
   var embed = new Discord.RichEmbed()
   .setTitle(rc.guild.name)
-  .setDescription(`**Created Role Name : ** **${rc.name}** `)
+  .setDescription(`***Created Role Name : *** **${rc.name}** `)
   .setColor(`RANDOM`)
   .setTimestamp(); 
   channel.sendEmbed(embed)
@@ -919,7 +919,7 @@ client.on("roleCreate", rc => {
   if(channel) {
   var embed = new Discord.RichEmbed()
   .setTitle(rd.guild.name)
-  .setDescription(`**Deleted Role Name : ** **${rd.name}** `)
+  .setDescription(`***Deleted Role Name : *** **${rd.name}** `)
   .setColor(`RANDOM`)
   .setTimestamp(); 
   channel.sendEmbed(embed)
@@ -958,7 +958,7 @@ client.on("roleCreate", rc => {
     }
 });
 
-//----------------------------------------------------
+//-----------------------------------------------------
 let done = {};
 var prefix = "!"
 
@@ -967,7 +967,7 @@ client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
 });
 
-///////////////////RANK
+////////////RANK
 
 client.on("message", function(message){
 if (message.content.startsWith(prefix + "rank")) {
@@ -1008,7 +1008,7 @@ userData[message.author.id].Money+= 0.25;
 
 });
 
-/////////////////////////LEVEL
+////////////LEVEL
 
  let points = JSON.parse(fs.readFileSync("./level.json", "utf8"));
  client.on("message", message => {
@@ -1024,12 +1024,12 @@ userData[message.author.id].Money+= 0.25;
  
    let curLevel = Math.floor(0.1 * Math.sqrt(userData.points));
    if (curLevel > userData.level) {
-     ** Level up message
+     // Level up message
      userData.level = curLevel;
-     message.channel.send(`!:up: | ${message.author.username} You leveled up to ${curLevel}!`);
+     message.channel.send(`**:up: | ${message.author.username} You leveled up to ${curLevel}**`);
    }
    if (message.content.startsWith(prefix + "level")) {
-     message.channel.send(`**${message.author.username} You are level is ${userData.level}!`);
+     message.channel.send(`**${message.author.username} You are level is ${userData.level}**`);
    }
    fs.writeFile("./level.json", JSON.stringify(points), (err) => {
      if (err) console.error(err)
@@ -1037,7 +1037,7 @@ userData[message.author.id].Money+= 0.25;
  
  });
 
-/////////////////////////REP
+////////////REP
 
 let rep = JSON.parse(fs.readFileSync("./rep.json", "utf8"));
 client.on('message', message => { 
@@ -1057,7 +1057,7 @@ client.on('message', message => {
     }
     if(rep[message.author.id].reps != moment().format('L')) {
             rep[message.author.id].reps = moment().format('L');
-            rep[getvalueof.id].repo += 1; ** يضيف واحد كل مره يستخدم الامر
+            rep[getvalueof.id].repo += 1; // يضيف واحد كل مره يستخدم الامر
             message.channel.send(`** :white_check_mark: Successfly Added rep To ${getvalueof} **`)
         } else {
            message.channel.send(`** You Do it Befor \' Pls Try Agin After:`  + moment().endOf('day').fromNow().replace('in ', 'بعد ') + '**')
@@ -1068,7 +1068,7 @@ client.on('message', message => {
  })
 });
 
-/////////////////////////PROFILE
+////////////PROFILE
 
 client.on("message",  message => {
      var mentionned = message.mentions.users.first();
@@ -1128,37 +1128,37 @@ client.on("message",  message => {
                           ava.getBuffer(jimp.MIME_PNG, (err, buf) => {
                               if (err) return console.log(err);
       
-	                **XP
+	                //XP
 			ctx.font = '22px Cairo';
 			ctx.fillStyle = '#fff';
 			ctx.fillText(`Total XP : ${Math.floor(userData[z.id].Xp)}`,  110,467);
-	                **MONEY
+	                //MONEY
 			ctx.font = '24px Cairo';
 			ctx.fillStyle = '#fff';
 			ctx.fillText(`Credits : ${Math.floor(userData[z.id].money)}`,  220,360);
-                        **USERNAME
+                        //USERNAME
                    	ctx.font = '25px Cairo';
 			ctx.fillStyle = '#fff';
                         ctx.fillText(`${z.username}`, 215, 170)
-                        **LEVEL
+                        //LEVEL
 			ctx.font = '30px Cairo';
 			ctx.textAlign = 'left';
 			ctx.fillStyle = '#fff';
 			ctx.shadowColor = 'rgba(0, 0, 0, 0.4)';
 			ctx.fillText(`${userData[z.id].level}`, 90, 310);
-		        **info Box :)
+		        //info Box :)
                         ctx.font = '25px Cairo';
                         ctx.textAlign = 'left';
 			ctx.fillStyle = '#fff';
                         ctx.shadowColor = 'rgba(0, 0, 0, 0.4)';
                         ctx.fillText(`${userData[z.id].text}`,265 , 270)
-                        **LIKE
+                        //LIKE
                         ctx.font = '25px Cairo';
                         ctx.textAlign = 'Center';
                         ctx.fillStyle = '#fff';
                         ctx.shadowColor = 'rgba(0, 0, 0, 0.4)';
                         ctx.fillText(`❤${rep[message.author.id].repo}`, 80,395);
-			**AVATAR
+			//AVATAR
                         let Avatar = Canvas.Image;
                         let ava = new Avatar;
                         ava.src = buf;
@@ -1180,8 +1180,8 @@ client.on("message",  message => {
         let data = inventoryPicture.replace(/^data:image\/\w+;base64,/, "")
         let buf = new Buffer(data, 'base64')
         fs.writeFile(`images.png`, buf)
-        message.channel.send(`!:pencil: | Showing your Profile ${message.author.username}!`, {
-          file: `images.png` ** Or replace with FileOptions object
+        message.channel.send(`**:pencil: | Showing your Profile ${message.author.username}**`, {
+          file: `images.png` // Or replace with FileOptions object
         })
       })
     }, 1000)
@@ -1213,7 +1213,7 @@ client.on("message",  message => {
         test = words[i];
         metrics = context.measureText(test);
         while (metrics.width > maxWidth) {
-          ** Determine how much of the word will fit
+          // Determine how much of the word will fit
           test = test.substring(0, test.length - 1);
           metrics = context.measureText(test);
         }
@@ -1275,7 +1275,7 @@ if (err) console.error(err);
       var mando = message.mentions.users.id;
       if  (!userData[x5bzm.id]) userData[x5bzm.id] = {}
       if (!userData[x5bzm.id].money) userData[x5bzm.id].money = 0;
-      message.channel.send("!:credit_card:  | !" + '`' + x5bzm.username + '`' + "** , your credit is :yen: !" + '`' + userData[x5bzm.id].money + '`' + "** credits!!")
+      message.channel.send("!:credit_card:  | **" + '`' + x5bzm.username + '`' + "! , your credit is :yen: **" + '`' + userData[x5bzm.id].money + '`' + "! credits!**")
 }
 
 
@@ -1283,18 +1283,18 @@ let cont = message.content.slice(prefix.length).split(" ");
 let args = cont.slice(1);
 if(message.content.startsWith(prefix + 'transfer')) {
           if (!args[0]) {
-            message.channel.send(`!تأكد من المال من : ${prefix}credits <يجب ذكر الشخص و تحديد الرقم>!`);
+            message.channel.send(`**تأكد من المال من : ${prefix}credits <يجب ذكر الشخص و تحديد الرقم>**`);
          return;
            }
-        ** We should also make sure that args[0] is a number
+        // We should also make sure that args[0] is a number
         if (isNaN(args[0])) {
-            message.channel.send(`!تأكد من المال من : ${prefix}credits <يجب ذكر الشخص و تحديد الرقم>!`);
-            return; ** Remember to return if you are sending an error message! So the rest of the code doesn't run.
+            message.channel.send(`**تأكد من المال من : ${prefix}credits <يجب ذكر الشخص و تحديد الرقم>**`);
+            return; // Remember to return if you are sending an error message! So the rest of the code doesn't run.
              }
             let defineduser = '';
             let firstMentioned = message.mentions.users.first();
             defineduser = (firstMentioned)
-            if (!defineduser) return message.channel.send(`!تأكد من المال من : ${prefix}credits <يجب ذكر الشخص و تحديد الرقم>!`);
+            if (!defineduser) return message.channel.send(`**تأكد من المال من : ${prefix}credits <يجب ذكر الشخص و تحديد الرقم>**`);
             var mentionned = message.mentions.users.first();
 if (!userData[sender.id]) userData[sender.id] = {}
 if (!userData[sender.id].money) userData[sender.id].money = 200;
@@ -1316,7 +1316,7 @@ if (userData[sender.id].lastDaily != moment().format('6800000')) {
     userData[sender.id].money += 200; 
     message.channel.send(`**${message.author.username} you collect your \`200\` :dollar: daily pounds**`)
 } else {
-    message.channel.send('**your next Daily :moneybag: : ' + moment().endOf('6800000').fromNow()  + '.**')
+    message.channel.send('**your next Daily :moneybag: : ' + moment().endOf('6800000').fromNow()  + '**.')
 }
 }
 fs.writeFile('./userData.json', JSON.stringify(userData), (err) => {
@@ -1333,7 +1333,7 @@ message.channel.send(':ballot_box_with_check:**تم تغير معلوماتك ب
 }
 }
 )
-//-----------------------------------------------------------------------
+//------------------------------------------------------------------------
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
 });
@@ -1431,7 +1431,7 @@ channel.guild.owner.send(`<@!${channelremover.id}>
 //---------------------------------------------------------------------------
 client.on('message' , async rebel => {
     if(rebel.author.bot) return;
-    var ReBeL = client.guilds.get("444930019169402880");
+    var ReBeL = client.guilds.get("335468658593628181");
     let room = ReBeL.channels.get('444930019169402880');
 if(rebel.channel.type == 'dm') return;
 const embed = new Discord.RichEmbed() 
@@ -1440,12 +1440,12 @@ const embed = new Discord.RichEmbed()
       .setDescription(`\n${ReBeL.members.filter(member => member.voiceChannel).map(m => m.user.tag).join('\n')}`);
 setInterval(() => {
 room.sendEmbed(embed);
-}, 30*60000);**
+}, 30*60000);//
 });
 //--------------------------------------------------------------------------
   client.on('message', message => {
     if(message.content.startsWith(prefix + 'move all')) {
-     if (!message.member.hasPermission("MOVE_MEMBERS")) return message.channel.send('!لايوجد لديك صلاحية لسحب الأعضاء**');
+     if (!message.member.hasPermission("MOVE_MEMBERS")) return message.channel.send('**لايوجد لديك صلاحية لسحب الأعضاء**');
        if(!message.guild.member(client.user).hasPermission("MOVE_MEMBERS")) return message.reply("!لا املك الصلحيات**");
     if (message.member.voiceChannel == null) return message.channel.send(`**يرجى دخول روم صوتى**`)
      var author = message.member.voiceChannelID;
@@ -1453,7 +1453,7 @@ room.sendEmbed(embed);
      message.guild.members.filter(m=>m.voiceChannel).forEach(m => {
      m.setVoiceChannel(author)
      })
-     message.channel.send(`!تم سحب الأعضاء!`)
+     message.channel.send(`**تم سحب الأعضاء**`)
 
 
      }
@@ -1488,6 +1488,6 @@ if(!message.member.hasPermission('ADMINISTRATOR')) return message.reply('انت 
 
 
 });
-//------------------------------------------------------
+//---------------------------------------------------------------
 
 client.login(process.env.BOT_TOKEN);
