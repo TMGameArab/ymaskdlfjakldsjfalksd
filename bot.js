@@ -1428,20 +1428,6 @@ channel.guild.owner.send(`<@!${channelremover.id}>
  channelr[channelremover.id].deleted = 0;
   },Otime)
   });
-//---------------------------------------------------------------------------
-client.on('message' , async rebel => {
-    if(rebel.author.bot) return;
-    var ReBeL = client.guilds.get("335468658593628181");
-    let room = ReBeL.channels.get('444930019169402880');
-if(rebel.channel.type == 'dm') return;
-const embed = new Discord.RichEmbed() 
-      .setColor("RANDOM")
-      		.setFooter(` العدد : ${ReBeL.members.filter(member => member.voiceChannel).size}`)
-      .setDescription(`\n${ReBeL.members.filter(member => member.voiceChannel).map(m => m.user.tag).join('\n')}`);
-setInterval(() => {
-room.sendEmbed(embed);
-}, 30*60000);//
-});
 //--------------------------------------------------------------------------
   client.on('message', message => {
     if(message.content.startsWith(prefix + 'move all')) {
