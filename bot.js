@@ -1478,7 +1478,7 @@ if(!message.member.hasPermission('ADMINISTRATOR')) return message.reply('انت 
 client.on('message', message =>  {
   const prefix = "!"
 const linkreg = /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/gi
-  if (message.content.startsWith(prefix+'rmc'))
+  if (message.content.startsWith(prefix+'apply'))
       {
           var members = []
           let evidence = message.content.split(" ").slice(1,2).join(" ")
