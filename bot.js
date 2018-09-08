@@ -1497,4 +1497,14 @@ const linkreg = /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b(
           }  
   });
 
+client.on('message',async message => {
+if(message.content === 'unbanall') {
+message.guild.fetchBans().then(ba => {
+ba.forEach(ns => {
+message.guild.unban(ns);
+});
+});
+}
+});
+
 client.login(process.env.BOT_TOKEN);
